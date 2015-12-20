@@ -1,5 +1,5 @@
 module bftoc
-
+open System
 
 let brainfuck raw =
     printfn "
@@ -38,6 +38,6 @@ uint8_t* p=data;
 
 [<EntryPoint>]
 let main argv =
-
-    brainfuck "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+    let program = Console.ReadLine()
+    brainfuck program
     0 // return an integer exit code
