@@ -3,6 +3,6 @@ BF to C
 
 ## Usage
 ```bash
-fsharp bftoc.fs
+fsharpc bftoc.fs
 ./bftoc hello.bf
 ```
