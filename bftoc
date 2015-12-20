@@ -1,0 +1,6 @@
+#!/bin/sh
+FILENAME=$(basename $1 .bf)
+mono bftoc.exe < $1 > $FILENAME.c
+cc -O2 $FILENAME.c -o $FILENAME
+./$FILENAME
+[ -x "$(command -v indent)" ] && indent $FILENAME.c
